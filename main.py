@@ -21,7 +21,7 @@ def main():
     btn=st.button("predict")
     if btn:
         result=predict_price(tra_date,house_age,dst_mrt,con_stores,latitude,longitude)
-    st.success(f"The output is : {result} ")
+    st.success(f"The output is : ${result} ")
 
 if __name__ == '__main__':
     main()
