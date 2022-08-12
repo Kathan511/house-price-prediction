@@ -1,6 +1,7 @@
-FROM python:3.7
-COPY . /app
+FROM python:3.9
+EXPOSE 8501
 WORKDIR /app
-RUN pip install -r requirements.txt
-ENTRYPOINT [ "streamlit","run" ]
-CMD [ "main.py" ]
+COPY requirements.txt ./requirements.txt
+RUN pip3 install -r requirements.txt
+COPY . .
+CMD streamlit run app.py
